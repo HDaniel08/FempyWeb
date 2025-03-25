@@ -1,0 +1,37 @@
+.queries {
+
+    font-family: Arial, sans-serif;
+
+
+    padding: 20px;
+    background-color: #f5fcff;
+    color:#899db4;
+  }
+  .card-container{
+    display: flex;
+  flex-wrap: wrap; /* Több sorba törés engedélyezése */
+  gap: 50px; /* Kártyák közötti távolság */
+  justify-content: center; /* Kártyák középre igazítása */
+  }
+ .query-card {
+    flex: 1 1 calc(45% - 50px); /* Kártya szélessége 50%, figyelembe véve a gap-et */
+    max-width: 700px;
+  
+  
+    min-width: 600px; /* Minimális szélesség biztosítása */
+  }
+  
+  .queries h1 {
+    font-size: 32px;
+    text-align: center;
+    color:#899db4;
+    margin-bottom: 40px;
+  }
+  .queries h3 {
+    font-size: 24px;
+    color:#899db4;
+   
+  }
+  
+  
+  

@@ -1,0 +1,23 @@
+.activity-card {
+  background-color: #f9f9f9; /* Finomabb háttérszín */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Mélyebb árnyék */
+  padding: 20px;
+
+  height: 500px;
+
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color:#9da9b8;
+  }
+  
+  .activity-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    height: 300px; /* Magasabb, hogy a vonaldiagram jól látható legyen */
+  }
+  

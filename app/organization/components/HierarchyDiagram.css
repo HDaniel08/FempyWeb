@@ -1,0 +1,98 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hierarchy-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  width:100%;
+
+}
+
+.position-card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid rgb(235, 235, 235);
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  height: auto;
+
+  box-sizing: border-box;
+  word-wrap: break-word;
+  opacity: 0; /* Animáció kezdőállapot */
+  animation: fadeIn 0.5s ease forwards; /* Fade-in animáció */
+  transition: all 0.3s ease; /* Általános méretváltozás animáció */
+}
+.subordinates .position-card {
+  flex: 1 1 calc(40% - 16px); /* Az elemek szélessége 50%, mínusz hézag */
+  max-width: calc(100% - 16px); /* Maximális szélesség biztosítása */
+  margin: 8px;
+}
+.position-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.position-card p {
+  color: #555;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.subordinates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  transition: all 0.3s ease; /* Simább elrendezési változások */
+}
+
+.employees-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  transition: all 0.3s ease; /* Simább átrendeződés */
+}
+
+.delete-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: transparent; /* Áttetsző alapállapot */
+  border: none;
+  color: #ff4d4d; /* Törlés színe */
+  font-size: 20px; /* Nagyobb ikon */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Finom árnyék */
+}
+
+.delete-button:hover {
+  background-color: #ff4d4d; /* Töltött hover állapot */
+  color: white; /* Fehér ikon */
+  transform: scale(1.1); /* Finom nagyítás */
+  box-shadow: 0 4px 10px rgba(255, 77, 77, 0.4); /* Erősebb árnyék */
+}
+
+.delete-button:active {
+  transform: scale(1); /* Kattintásra visszaáll az eredeti méret */
+  box-shadow: 0 2px 5px rgba(255, 77, 77, 0.2); /* Gyengébb árnyék */
+}
